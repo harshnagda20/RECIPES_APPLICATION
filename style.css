@@ -1,0 +1,349 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(220, 215, 215);
+}
+/* SCROLL-BAR */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lightcoral; 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(179, 94, 94); 
+  }
+
+nav{
+    border: 5px solid black;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px;
+    background-color: lightcoral;
+    color: whitesmoke;
+}
+#first{
+    color: black;
+    text-shadow: 10px 10px 40px black ;
+}
+#logo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 10px 10px 20px black ;
+}
+#searchRecipes{
+    height: 50px;
+    width: 300px;
+    margin-right: 25px;
+    font-size: 25px;
+    padding-left: 12px;
+    border-radius: 8%;
+}
+#searchRecipes::placeholder{
+    font-size: 18px;
+    color: rgb(56, 55, 55);
+}
+[type="submit"]{
+    height: 45px;
+    width: 150px;
+    background-color: black;
+    color: lightcyan;
+    font-size: 18px;
+    border-radius: 8%;
+}
+[type="submit"]:active{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+[type="submit"]:hover{
+    cursor: pointer;
+}
+#container{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+} 
+
+/* DIV  */
+#recipe_item{
+    height: 420px;
+    width: 340px;
+    border-radius: 20px;
+    margin-top: 20px;
+    gap: 10px;
+    /* position: relative; */
+}
+/* image  */
+#food_img{
+    height: 70%;
+    border: 5px double lightcoral;
+    border-radius: 25px;
+    box-shadow: 10px 20px 70px lightcoral;
+    transition:transform 0.5s ease ;
+  
+}
+#food_img:hover{ 
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+/* item name h2 */
+#recipe_name{
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    font-style: italic;
+}
+/* click to view recipe  button  */
+#view_recipe{
+    background-color: black;
+    color: lightcyan;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    border-radius: 25%;
+    margin: 0px 20px;
+}
+#view_recipe:hover{
+    cursor: pointer;
+
+}
+#view_recipe:active{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        transform: scale(1.2);
+}
+
+#ing_ins {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #ing_ins_info {
+    max-height: 80vh;
+    width: 60vw;
+    background-color: rgb(220, 215, 215);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    top: 70px;
+    left: 250px;
+    /* SCROLL-BAR */
+   ::-webkit-scrollbar {
+    width: 15px;
+    } 
+    /* Track */
+    ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 40px;
+    } 
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+    background: rgb(242, 61, 61); 
+    border-radius: 40px;
+   }
+  /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+    background: rgb(239, 144, 144); 
+   }
+  }
+  
+  #ing_info,#ins_info {
+    padding: 20px;
+    
+  }
+  
+  #ing_info {
+    flex-basis: 60%;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 4px 4px 50px lightcoral;
+    margin-bottom: 50px;
+    margin-top: 25px;
+  }
+  
+  #ing_info h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: rgb(238, 115, 115);
+    overflow: hidden;
+    padding: 10px;
+    font-style: italic;
+  }
+  
+  ul {
+    margin: 10px 0px 0px 20px;
+    padding: 10px 20px;
+    list-style: disc;
+  }
+  
+  li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    font-weight: 600;
+  }
+  
+  #ins_info {
+    flex-basis: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 14px 50px lightcoral;
+    padding: 20px;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  #ins_info h1 {
+    font-size: 28px;
+    color: rgb(238, 115, 115);
+    padding: 10px;
+    font-style: italic;
+  }
+  
+  #ins_info p {
+    font-weight: 600;
+    text-align: justify;
+  }
+#close{
+    background-color: black;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    border-radius: 7px;
+    margin: 10px;
+}
+/*  DONE  BY ME  */
+#close:hover{
+    cursor: pointer;
+}
+#close:active{
+    background-color: white;
+}
+/* Media Queries for Tablets (screen width up to 768px) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: start;
+        height: auto;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    #logo {
+        font-size: 40px; /* Adjust logo size */
+        margin-bottom: 15px; /* Add space below the logo */
+    }
+
+    form {
+        width: 100%; /* Form takes full width */
+        display: flex;
+        flex-direction: row; /* Stack input and button vertically */
+        align-items: center;
+        gap: 10px; /* Space between input and button */
+    }
+    #searchRecipes {
+        width: 40%; /* Input field takes most of the width */
+    }
+
+    [type="submit"] {
+        width: 20%; /* Submit button takes most of the width */
+    }
+    #ing_ins_info {
+        max-height: 81%;
+        width: 67%;
+        background-color: rgb(220, 215, 215);
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.6);
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        top: 124px;
+        left: 114px;
+    }
+}
+
+/* Media Queries for Mobile Devices (screen width up to 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        align-items: start;
+        height: auto;
+        padding: 10px;
+    }
+
+    #logo {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+    #searchRecipes {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    [type="submit"] {
+        width: 40%;
+        font-size: 16px;
+    }
+    #ing_ins_info {
+        max-height: 81%;
+        width: 87%;
+        background-color: rgb(220, 215, 215);
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.6);
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        top: 70px;
+        left: 24px;
+    }
+    
+}
